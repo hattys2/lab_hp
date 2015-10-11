@@ -1,15 +1,16 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<div class="nav">
   <div class="container">
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",  root_path %></li>
-        <li><%= link_to "研究概要",  about_path %></li>
-        <li><%= link_to "ニュース",  news_path %></li>
-        <li><%= link_to "メンバー",  member_path %></li>
-        <li><%= link_to "研究設備",  equipment_path %></li>
-        <li><%= link_to "リンク",  links_path %></li>
+      <ul class="nav nav-tabs">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "研究概要", about_path %></li>
+        <li><%= link_to "ニュース", :action => 'home', :anchor => 'news' %></li>
+        <li><%= link_to "メンバー", member_path  %></li>
+        <li><%= link_to "研究設備", equipment_path %></li>
+        <li><%= link_to "リンク", links_path %></li>
         <li><%= link_to "Wiki",  'http://matokami.wiki.fc2.com/' %></li>
+        <div align="right">
+            <%= image_tag("lab_hp_logo.jpg", :size => "172x50") %>
+        </div>
       </ul>
-    </nav>
   </div>
-</header>
+</div>

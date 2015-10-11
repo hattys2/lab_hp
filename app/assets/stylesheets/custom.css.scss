@@ -4,6 +4,11 @@
 
 /* main */
 
+.nav {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 .nav a {
   color: #5a5a5a;
   font-size: 18px;
@@ -18,7 +23,7 @@
 
 
 .jumbotron {
-  background-image:url('../images/lab5.jpg');
+  background-image:url('http://www3.taiki-sasaki.tokyo/wp-content/uploads/2015/03/tepco_tomeruzo_2.png');
   height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,19 +75,22 @@ thead.scrollHead,tbody.scrollBody{
 }
 tbody.scrollBody{
   overflow-y:scroll;
-  height:100px;
+  height:400px;
+  border-spacing: 7px;
 }
 
 /*幅調整*/
 td,th{
-  table-layout:fixed;
+  table-layout:auto;
+  padding:9px;
 }
 .date{
   width:70px;
+  vertical-align: top;
 }
 
 .news{
-  width:400px;
+  width:600px;
 }
 
 .neighborhood-guides  {
