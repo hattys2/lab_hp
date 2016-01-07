@@ -1,0 +1,46 @@
+<%= form_for @post do |f| %>
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <p><%= @post.errors.count %>件のエラーが発生したため保存ができませんでした。</p>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+  <p>
+  <%= f.label :title, "タイトル" %><br>
+  <%= f.text_field :title %>
+  </p>
+
+  <br>
+  <p>
+  <%= f.label :author, "著者、出典" %><br>
+  <%= f.text_field :author %>
+  </p>
+
+  <br>
+  <p>
+  <%= f.label :name, "発表者" %><br>
+  <%= f.text_field :name %>
+  </p>
+  <br>
+  <p>
+  <%= f.label :jtext, "日本語要約" %><br>
+  <%= f.text_area :jtext, cols: 120, rows: 8 %>
+  </p>
+
+  <br>
+  <p>
+  <%= f.label :etext, "英語要約" %><br>
+  <%= f.text_area :etext, cols: 120, rows: 8 %>
+  </p>
+
+  <br>
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>

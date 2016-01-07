@@ -1,0 +1,25 @@
+<div class="container">
+  <h3>論文輪講</h3>
+  <p>学生の論文輪講における発表内容を掲載します.</p>
+
+  <table>
+    <tr>
+      <th>論文タイトル</th>
+      <th>発表者</th>
+    </tr>
+
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.name %></td>
+        <td><%= link_to '詳細', post %></td>
+        <td><%= link_to '編集', edit_post_path(post) %></td>
+        <td><%= link_to '削除', post_path(post),
+          method: :delete, data: { confirm: '削除しますか？' } %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to '新しい投稿', new_post_path %>
+  <%= link_to '的場研・神原研ホームページへ戻る', 'https://matoba-kamihara-lab.herokuapp.com' %>
+</div>
